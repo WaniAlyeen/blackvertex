@@ -12,17 +12,17 @@ const services = [
   },
   {
     num: "02",
+    title: "Systems That Work\nWhile You Sleep",
+    description:
+      "Beyond advertising, we architect AI-powered business pipelines — custom agents, automated workflows, and intelligent systems designed to remove friction, reduce overhead, and scale operations without scaling headcount.\n\nBuilt for businesses serious about efficiency.",
+    tags: "AI Automation  /  Core Service",
+  },
+  {
+    num: "03",
     title: "Any Image.\nStudio Output.",
     description:
       "Hand us a smartphone photo.\nWe hand you a broadcast-ready advertisement.\n\nThrough a proprietary multi-layered production workflow we developed entirely in-house, we transform raw client references — however imperfect — into pixel-perfect, cinematic brand content. No studio required. No compromise on quality.",
     tags: "AI Production  /  Image Enhancement  /  Brand Advertising",
-  },
-  {
-    num: "03",
-    title: "Systems That Work\nWhile You Sleep",
-    description:
-      "Beyond advertising, we architect AI-powered business pipelines — custom agents, automated workflows, and intelligent systems designed to remove friction, reduce overhead, and scale operations without scaling headcount.\n\nBuilt for businesses serious about efficiency.",
-    tags: "AI Agents  /  Workflow Automation  /  Business Intelligence",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function Services() {
             letterSpacing: "-0.03em",
           }}
         >
-          One Studio.
+          One Suite.
           <br />
           <span style={{ paddingLeft: "clamp(1rem, 8%, 5rem)", fontStyle: "italic" }}>
             Every Dimension.
