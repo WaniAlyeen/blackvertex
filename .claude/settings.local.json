@@ -6,7 +6,10 @@
       "Bash(curl:*)",
       "Bash(else echo:*)",
       "Bash(fi)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }
