@@ -1,14 +1,16 @@
 "use client";
 
+export const dynamic = 'force-dynamic';
+
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase-browser";
-import dynamic from "next/dynamic";
+import nextDynamic from "next/dynamic";
 import Link from "next/link";
 import { FaArrowLeft, FaImage, FaGlobe, FaEyeSlash } from "react-icons/fa";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const MDEditor = dynamic(() => import("@uiw/react-md-editor"), { ssr: false }) as any;
+const MDEditor = nextDynamic(() => import("@uiw/react-md-editor"), { ssr: false }) as any;
 
 type PostData = {
   title: string;
