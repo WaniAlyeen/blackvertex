@@ -1,41 +1,44 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { gsap } from "gsap";
 
 const testimonials = [
   {
     quote:
-      "Black Vertex revolutionized our ad production. We generate 100× more creatives in half the time.",
-    name: "Sarah Jenkins",
-    company: "Nexus AI",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop",
+      "Black Vertex created an AI-powered video showcasing our showroom that felt like a real cinematic experience, plus an ad campaign that drives serious engagement. The team delivered both with incredible speed and quality — they understood our brand instantly and created content our customers respond to immediately.",
+    name: "Josh",
+    company: "Best Brand Appliances",
   },
   {
     quote:
-      "The lip-sync technology is indistinguishable from reality. We localized our entire catalog into 15 languages.",
-    name: "David Chen",
-    company: "EduTech Global",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop",
+      "Working with Black Vertex was a game-changer for us. We came to them with a concept, and they didn't just execute it — they elevated it. The AI-powered creativity brought a level of polish and storytelling to our content that we didn't think was possible on our timeline. The team was incredibly collaborative, responsive to feedback, and they delivered faster than we expected. Our content now feels premium, which matters when you're competing for attention. They've set a new standard for what we expect from our creative partners.",
+    name: "Madiha",
+    company: "Ru Posh",
   },
   {
     quote:
-      "Integrating their custom AI agents saved our team nearly 400 hours a month. Absolute game-changers.",
-    name: "Elena Rossi",
-    company: "Finserve",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop",
+      "Black Vertex created visuals that honored our heritage while feeling completely modern and cinematic. The team delivered beautiful, high-impact content that represents our club exactly as we wanted to be seen — with exceptional professionalism and production quality.",
+    name: "Abid",
+    company: "Royal Crest Horse Club",
   },
   {
     quote:
-      "The visual fidelity of the cinematic campaigns they produce is staggering. Hollywood-level production, accessible.",
-    name: "Marcus Thorne",
-    company: "Vanguard Media",
-    avatar:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop",
+      "In the energy sector, messaging clarity is critical, but so is capturing attention. Black Vertex did both. They took our technical story and turned it into something visually compelling and genuinely engaging. The speed at which they delivered was remarkable — we needed fast turnaround, and they delivered without compromising on cinematic quality. The team's innovation with AI tools meant we could iterate quickly and get more creative iterations than we'd budgeted for. They're not just an ad production company — they're strategic partners who understand impact.",
+    name: "Fahad",
+    company: "Electra Energy",
+  },
+  {
+    quote:
+      "We wanted our campaigns to feel premium, and Black Vertex delivered exactly that. Every frame looked intentional, every shot told a story. The team brought a creative energy that was refreshing — they didn't just follow our brief, they interpreted it and made it better. The turnaround was impressive, but what really stood out was the quality of collaboration. They asked the right questions, understood our brand DNA, and produced content that our customers responded to immediately. This is the level of production we'll be coming back for.",
+    name: "Ifaq",
+    company: "Royal Yamaha",
+  },
+  {
+    quote:
+      "Black Vertex created ads that feel like art — cinematic, thoughtful, and unmistakably premium. The team was professional and genuinely invested in making our brand shine, delivering sophisticated content that tells the story of our craft.",
+    name: "Uroosa",
+    company: "Cashmere Naqqashi",
   },
 ];
 
@@ -164,26 +167,16 @@ export default function Testimonials() {
               >
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <div className="flex items-center gap-3">
-                <div className="relative w-8 h-8 overflow-hidden shrink-0">
-                  <Image
-                    src={t.avatar}
-                    alt={t.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <p
-                    className="font-sans text-[13px] font-light"
-                    style={{ color: "#374151" }}
-                  >
-                    {t.name}
-                  </p>
-                  <p className="eyebrow" style={{ fontSize: "10px" }}>
-                    {t.company}
-                  </p>
-                </div>
+              <div>
+                <p
+                  className="font-sans text-[13px] font-light"
+                  style={{ color: "#374151" }}
+                >
+                  {t.name}
+                </p>
+                <p className="eyebrow" style={{ fontSize: "10px" }}>
+                  {t.company}
+                </p>
               </div>
             </div>
           ))}
