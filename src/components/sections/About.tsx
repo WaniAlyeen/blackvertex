@@ -40,7 +40,7 @@ export default function About() {
       }}
     >
       <div className="reveal hidden-below mb-16 md:mb-24">
-        <span className="eyebrow">0.4&nbsp;&nbsp;Who We Are</span>
+        <span className="eyebrow">0.5&nbsp;&nbsp;Who We Are</span>
       </div>
 
       <div className="grid grid-cols-12 gap-8 mb-16 md:mb-20">

@@ -52,7 +52,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
       }}
     >
       <div className="reveal hidden-below mb-16 md:mb-24">
-        <span className="eyebrow">0.3&nbsp;&nbsp;Selected Work</span>
+        <span className="eyebrow">0.4&nbsp;&nbsp;Selected Work</span>
       </div>
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14 md:mb-16">

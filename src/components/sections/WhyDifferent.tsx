@@ -93,15 +93,15 @@ export default function WhyDifferent() {
         {blocks.map((block, i) => (
           <div
             key={i}
-            className="py-10 md:py-12 pr-12"
+            className={`py-6 md:py-12 pr-0 md:pr-12${i < blocks.length - 1 ? " border-b border-gray-100 md:border-b-0" : ""}`}
             style={{
               borderRight: i < blocks.length - 1 ? "1px solid rgba(0,0,0,0.07)" : "none",
-              paddingLeft: i > 0 ? "clamp(1.5rem, 4vw, 3rem)" : "0",
+              paddingLeft: i > 0 ? "clamp(0rem, 4vw, 3rem)" : "0",
             }}
           >
             <div className="eyebrow mb-3">{block.label}</div>
             <p
-              className="font-sans font-light text-[14px] leading-relaxed"
+              className="font-sans font-light text-sm md:text-[14px] leading-relaxed"
               style={{ color: "#6b7280" }}
             >
               {block.text}

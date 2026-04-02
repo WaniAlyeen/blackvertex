@@ -10,12 +10,8 @@ const footerLinks = {
     { label: "Services", href: "/#services" },
     { label: "Work", href: "/work" },
     { label: "Blog", href: "/blog" },
-    { label: "Pricing", href: "/#pricing" },
+    { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/#contact" },
-  ],
-  Follow: [
-    { label: "LinkedIn →", href: "https://www.linkedin.com/company/black-vertex/" },
-    { label: "Instagram →", href: "https://www.instagram.com/blackvertex.io?igsh=MW5tOXJoend6N3E0eg==" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy" },

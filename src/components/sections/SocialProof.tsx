@@ -42,7 +42,7 @@ export default function SocialProof() {
     >
       {/* Eyebrow */}
       <div className="reveal hidden-below mb-16 md:mb-24">
-        <span className="eyebrow">0.5&nbsp;&nbsp;Proof</span>
+        <span className="eyebrow">0.7&nbsp;&nbsp;Proof</span>
       </div>
 
       {/* Large heading */}

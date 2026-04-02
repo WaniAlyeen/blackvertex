@@ -115,7 +115,7 @@ export default function Testimonials() {
     >
       {/* Eyebrow */}
       <div className="reveal hidden-below px-8 md:px-12 mb-16 md:mb-20">
-        <span className="eyebrow">0.4&nbsp;&nbsp;Client Voices</span>
+        <span className="eyebrow">0.6&nbsp;&nbsp;Client Voices</span>
       </div>
 
       {/* Heading */}
@@ -138,8 +138,34 @@ export default function Testimonials() {
         </h2>
       </div>
 
-      {/* Carousel */}
-      <div className="relative">
+      {/* Mobile: stacked cards */}
+      <div className="block md:hidden px-5 flex flex-col gap-6">
+        {testimonials.map((t, idx) => (
+          <div
+            key={idx}
+            className="w-full p-6 bg-white"
+            style={{ border: "1px solid rgba(0,0,0,0.07)" }}
+          >
+            <p
+              className="font-sans font-light text-sm leading-relaxed mb-6 italic"
+              style={{ color: "#4b5563" }}
+            >
+              &ldquo;{t.quote}&rdquo;
+            </p>
+            <div>
+              <p className="font-sans text-sm font-medium" style={{ color: "#374151" }}>
+                {t.name}
+              </p>
+              <p className="eyebrow" style={{ fontSize: "10px", color: "#9ca3af" }}>
+                {t.company}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: infinite scroll carousel */}
+      <div className="relative hidden md:block">
         {/* Fade edges — MUST match bg color */}
         <div
           className="absolute top-0 left-0 w-24 md:w-40 h-full z-10 pointer-events-none"

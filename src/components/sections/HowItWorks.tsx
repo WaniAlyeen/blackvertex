@@ -107,23 +107,24 @@ export default function HowItWorks() {
         {steps.map((step, idx) => (
           <div
             key={idx}
-            className={`reveal hidden-below delay-${idx + 3} grid grid-cols-12 gap-6 py-10 md:py-12`}
+            className={`reveal hidden-below delay-${idx + 3} grid grid-cols-12 gap-4 md:gap-6 py-8 md:py-12`}
           >
-            <div className="col-span-2 md:col-span-1 flex items-start pt-1">
+            <div className="col-span-12 md:col-span-1 flex items-center gap-3 md:block md:pt-1">
               <span
-                className="font-mono text-[11px] font-medium"
+                className="font-mono text-xs font-medium"
                 style={{ color: "#1a1a1a" }}
               >
                 {step.num}
               </span>
+              <p className="eyebrow md:hidden">{step.label}</p>
             </div>
 
-            <div className="col-span-10 md:col-span-4">
-              <p className="eyebrow mb-2">{step.label}</p>
+            <div className="col-span-12 md:col-span-4">
+              <p className="eyebrow mb-2 hidden md:block">{step.label}</p>
               <h3
                 className="font-sans font-light text-gray-900"
                 style={{
-                  fontSize: "clamp(1.3rem, 2.2vw, 1.8rem)",
+                  fontSize: "clamp(1.1rem, 2.2vw, 1.8rem)",
                   letterSpacing: "-0.02em",
                   lineHeight: 1.15,
                 }}
@@ -134,7 +135,7 @@ export default function HowItWorks() {
 
             <div className="col-span-12 md:col-span-6 md:col-start-7 flex flex-col justify-center gap-3">
               <p
-                className="font-sans font-light text-[15px] leading-relaxed"
+                className="font-sans font-light text-sm md:text-[15px] leading-relaxed"
                 style={{ color: "#6b7280" }}
               >
                 {step.body}
