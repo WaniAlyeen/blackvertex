@@ -78,10 +78,18 @@ export default function Pricing() {
           We don&apos;t believe a price list does justice to that.
         </p>
         <p
+          className="font-sans font-light text-[15px] leading-relaxed mb-6"
+          style={{ color: "#6b7280" }}
+        >
+          We typically partner with brands investing seriously in their content and
+          growth. If you have a vision worth executing, we want to hear it — no
+          matter where you&apos;re starting from.
+        </p>
+        <p
           className="font-sans font-light text-[15px] leading-relaxed"
           style={{ color: "#6b7280" }}
         >
-          Tell us what you&apos;re building. We&apos;ll tell you exactly what it takes — and what it&apos;s worth.
+          Tell us what you&apos;re building. We&apos;ll tell you exactly what it takes.
         </p>
       </div>
 
@@ -94,10 +102,11 @@ export default function Pricing() {
           Start a Conversation →
         </a>
         <p
-          className="font-sans font-light text-[12px] tracking-[0.08em] uppercase"
+          className="font-sans font-light text-[11px] leading-relaxed"
           style={{ color: "#aaaaaa" }}
         >
-          No templates. No packages. No surprises.
+          * Most brand campaigns are scoped after an initial consultation. We&apos;ll
+          give you a clear number before any work begins. No surprises.
         </p>
       </div>
     </section>

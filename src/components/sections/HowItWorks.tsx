@@ -26,6 +26,13 @@ const steps = [
     label: "Delivery",
     heading: "Broadcast-ready. Every time.",
     body: "Final assets delivered to specification — formatted, finished, and built to perform across every channel you need.",
+    footnote: "Every project includes unlimited revision rounds until the output is exactly right. This is partnership, not production.",
+  },
+  {
+    num: "05",
+    label: "Iteration",
+    heading: "Until it's exactly right.",
+    body: "We don't deliver and disappear. Every project includes unlimited revision rounds — because the brief is just the beginning. We stay in it until the output matches the vision. That's what partnership looks like.",
   },
 ];
 
@@ -125,13 +132,21 @@ export default function HowItWorks() {
               </h3>
             </div>
 
-            <div className="col-span-12 md:col-span-6 md:col-start-7 flex items-center">
+            <div className="col-span-12 md:col-span-6 md:col-start-7 flex flex-col justify-center gap-3">
               <p
                 className="font-sans font-light text-[15px] leading-relaxed"
                 style={{ color: "#6b7280" }}
               >
                 {step.body}
               </p>
+              {step.footnote && (
+                <p
+                  className="font-sans font-light text-[11px] tracking-[0.08em] uppercase"
+                  style={{ color: "#aaaaaa" }}
+                >
+                  {step.footnote}
+                </p>
+              )}
             </div>
           </div>
         ))}

@@ -57,7 +57,7 @@ export default function Hero() {
         {/* CTA buttons */}
         <div className="flex flex-wrap gap-2 mb-7">
           <a
-            href="/#projects"
+            href="/#contact"
             className="text-[11px] font-light"
             style={{
               color: "#111111",
@@ -66,10 +66,10 @@ export default function Hero() {
               padding: "4px 12px",
             }}
           >
-            Explore Our Work →
+            Start a Project →
           </a>
           <a
-            href="/#contact"
+            href="/#projects"
             className="text-[11px] font-light"
             style={{
               color: "#6b7280",
@@ -78,7 +78,7 @@ export default function Hero() {
               padding: "4px 12px",
             }}
           >
-            Get in Touch →
+            View Our Work →
           </a>
         </div>
 

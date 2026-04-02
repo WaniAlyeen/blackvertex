@@ -87,17 +87,17 @@ export default function CTA() {
 
         <div className="flex flex-col sm:flex-row gap-4 shrink-0">
           <a
-            href="mailto:hello@blackvertex.com"
+            href="mailto:hello@blackvertex.io"
             className="btn-fill px-8 py-4 text-[13px] font-sans font-light tracking-wide"
           >
             Start a Project →
           </a>
           <a
-            href="mailto:hello@blackvertex.com"
+            href="mailto:hello@blackvertex.io"
             className="btn-fill px-8 py-4 text-[13px] font-sans font-light tracking-wide"
             style={{ borderColor: "rgba(0,0,0,0.1)" }}
           >
-            hello@blackvertex.com
+            hello@blackvertex.io
           </a>
         </div>
       </div>

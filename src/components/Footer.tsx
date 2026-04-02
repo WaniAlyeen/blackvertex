@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaTwitter, FaLinkedin, FaYoutube, FaKey } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaInstagram, FaKey } from "react-icons/fa";
 
 const footerLinks = {
   Pages: [
@@ -14,12 +14,13 @@ const footerLinks = {
     { label: "Contact", href: "/#contact" },
   ],
   Follow: [
-    { label: "LinkedIn →", href: "#" },
-    { label: "X / Twitter →", href: "#" },
+    { label: "LinkedIn →", href: "https://www.linkedin.com/company/black-vertex/" },
+    { label: "Instagram →", href: "https://www.instagram.com/blackvertex.io?igsh=MW5tOXJoend6N3E0eg==" },
   ],
   Legal: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Use", href: "/terms" },
+    { label: "NDA & Data Security", href: "/privacy" },
   ],
 };
 
@@ -77,19 +78,31 @@ export default function Footer() {
             AI Advertising &amp; Automation
           </p>
           <div className="flex gap-3">
-            {[FaTwitter, FaLinkedin, FaYoutube].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="btn-fill w-9 h-9 flex items-center justify-center"
-                style={{
-                  borderColor: "rgba(0,0,0,0.1)",
-                  color: "#9ca3af",
-                }}
-              >
-                <Icon className="text-[12px]" />
-              </a>
-            ))}
+            <a
+              href="mailto:hello@blackvertex.io"
+              className="btn-fill w-9 h-9 flex items-center justify-center"
+              style={{ borderColor: "rgba(0,0,0,0.1)", color: "#9ca3af" }}
+            >
+              <FaEnvelope className="text-[12px]" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/black-vertex/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-fill w-9 h-9 flex items-center justify-center"
+              style={{ borderColor: "rgba(0,0,0,0.1)", color: "#9ca3af" }}
+            >
+              <FaLinkedin className="text-[12px]" />
+            </a>
+            <a
+              href="https://www.instagram.com/blackvertex.io?igsh=MW5tOXJoend6N3E0eg=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-fill w-9 h-9 flex items-center justify-center"
+              style={{ borderColor: "rgba(0,0,0,0.1)", color: "#9ca3af" }}
+            >
+              <FaInstagram className="text-[12px]" />
+            </a>
           </div>
         </div>
 

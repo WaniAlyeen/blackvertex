@@ -5,24 +5,27 @@ import { useEffect, useRef } from "react";
 const services = [
   {
     num: "01",
-    title: "Character-Consistent\nAI Talent",
+    title: "AI Brand\nAmbassadors",
+    subtitle: "Character-consistent talent built\nfor campaigns that scale.",
     description:
       "Your brand deserves a face that never cancels, never ages, and shows up identically across every campaign, forever.\n\nWe build fully consistent AI characters — crafted from your references, your aesthetic, your vision. A brand ambassador that is entirely yours. One face. Infinite executions.",
     tags: "AI Casting  /  Character Consistency  /  Brand Identity",
   },
   {
     num: "02",
-    title: "Systems That Work\nWhile You Sleep",
-    description:
-      "Beyond advertising, we architect AI-powered business pipelines — custom agents, automated workflows, and intelligent systems designed to remove friction, reduce overhead, and scale operations without scaling headcount.\n\nBuilt for businesses serious about efficiency.",
-    tags: "AI Automation  /  Core Service",
-  },
-  {
-    num: "03",
-    title: "Any Image.\nStudio Output.",
+    title: "End-to-End Content\nProduction",
+    subtitle: "Raw material to broadcast-ready.\nAny reference. Any scale.",
     description:
       "Hand us a smartphone photo.\nWe hand you a broadcast-ready advertisement.\n\nThrough a proprietary multi-layered production workflow we developed entirely in-house, we transform raw client references — however imperfect — into pixel-perfect, cinematic brand content. No studio required. No compromise on quality.",
     tags: "AI Production  /  Image Enhancement  /  Brand Advertising",
+  },
+  {
+    num: "03",
+    title: "AI Business\nAutomation",
+    subtitle: "Custom workflows, intelligent agents,\nand pipelines that run your operations.",
+    description:
+      "Beyond advertising, we architect AI-powered business pipelines — custom agents, automated workflows, and intelligent systems designed to remove friction, reduce overhead, and scale operations without scaling headcount.\n\nBuilt for businesses serious about efficiency.",
+    tags: "AI Agents  /  Workflow Automation  /  Business Intelligence",
   },
 ];
 
@@ -123,6 +126,12 @@ export default function Services() {
               >
                 {service.title}
               </h3>
+              <p
+                className="font-sans font-light text-[13px] leading-snug mt-2"
+                style={{ color: "#9ca3af", whiteSpace: "pre-line" }}
+              >
+                {service.subtitle}
+              </p>
             </div>
 
             <div className="col-span-12 md:col-span-6 md:col-start-7 flex flex-col justify-center gap-4">
