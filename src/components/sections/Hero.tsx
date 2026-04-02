@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <section className="w-full bg-white overflow-hidden">
 
-      {/* ─── MOBILE LAYOUT: image on top, text below ─── */}
-      <div className="flex flex-col md:hidden">
+      {/* ─── MOBILE LAYOUT: text overlaid directly on full-screen image ─── */}
+      <div className="relative md:hidden" style={{ height: "100svh" }}>
 
-        {/* Image */}
-        <div className="relative w-full" style={{ minHeight: "60vh" }}>
+        {/* Image — full screen */}
+        <div className="absolute inset-0" style={{ zIndex: 0 }}>
           <Image
             src="/phbg.png"
             alt=""
@@ -22,38 +22,40 @@ export default function Hero() {
           />
         </div>
 
-        {/* Text block — glassmorphism panel overlapping image */}
+        {/* Subtle bottom gradient — darkens just enough for text readability */}
         <div
-          className="relative px-6 py-8"
+          className="absolute bottom-0 left-0 right-0 pointer-events-none"
           style={{
-            marginTop: "-3rem",
-            zIndex: 10,
-            background: "rgba(255, 255, 255, 0.08)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            borderTop: "1px solid rgba(255, 255, 255, 0.15)",
-            borderBottom: "1px solid rgba(255, 255, 255, 0.05)",
+            height: "50%",
+            background: "linear-gradient(to bottom, transparent, rgba(0,0,0,0.18))",
+            zIndex: 1,
           }}
+        />
+
+        {/* Text — absolute bottom, no background */}
+        <div
+          className="absolute bottom-0 left-0 right-0 px-6 pb-10"
+          style={{ zIndex: 10 }}
         >
           <p
             className="font-medium uppercase mb-3"
             style={{
               fontSize: "0.6rem",
               letterSpacing: "0.12em",
-              color: "rgba(255, 255, 255, 0.6)",
+              color: "#333333",
             }}
           >
             BLACK VERTEX — EST. 2024
           </p>
 
           <h1
-            className="font-light mb-2"
+            className="mb-2"
             style={{
               fontSize: "clamp(2.4rem, 8vw, 3.5rem)",
               lineHeight: 1.05,
               letterSpacing: "-0.02em",
-              color: "#FFFFFF",
-              textShadow: "0 1px 20px rgba(0,0,0,0.15)",
+              fontWeight: 500,
+              color: "#111111",
             }}
           >
             We Make the
@@ -65,14 +67,14 @@ export default function Hero() {
 
           <p
             className="font-light mb-4"
-            style={{ fontSize: "0.7rem", color: "rgba(255, 255, 255, 0.5)" }}
+            style={{ fontSize: "0.7rem", color: "#666666" }}
           >
             ¹ AI-powered advertising at the edge of what exists
           </p>
 
           <p
             className="font-light mb-6"
-            style={{ fontSize: "0.9rem", color: "rgba(255, 255, 255, 0.75)" }}
+            style={{ fontSize: "0.9rem", color: "#444444" }}
           >
             Black Vertex is an AI consultancy building the advertisements
             your competition doesn&apos;t know how to make yet.
@@ -102,8 +104,8 @@ export default function Hero() {
               className="font-light text-center"
               style={{
                 fontSize: "0.75rem",
-                color: "#6b7280",
-                border: "1px solid rgba(0,0,0,0.12)",
+                color: "#444444",
+                border: "1px solid rgba(0,0,0,0.15)",
                 borderRadius: "9999px",
                 padding: "14px 16px",
                 minHeight: "48px",
