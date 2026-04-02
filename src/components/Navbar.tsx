@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Logo — fixed top-left, independent of pill */}
+      {/* Logo — fixed top-left */}
       <Link
         href="/"
         className="fixed top-5 left-8 z-50 flex items-center"
@@ -38,9 +38,9 @@ export default function Navbar() {
         />
       </Link>
 
-      {/* Centered floating nav — permanent capsule */}
+      {/* Capsule nav — desktop only */}
       <nav
-        className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1"
+        className="fixed top-5 left-1/2 -translate-x-1/2 z-50 hidden md:flex items-center gap-1"
         style={{
           borderRadius: "9999px",
           border: "1px solid rgba(0,0,0,0.08)",
@@ -51,24 +51,20 @@ export default function Navbar() {
           padding: "8px 8px 8px 20px",
         }}
       >
-        {/* Desktop nav links */}
-        <div className="hidden md:flex items-center gap-1">
-          {navItems.map(({ label, href }) => (
-            <Link
-              key={label}
-              href={href}
-              className="px-4 py-1.5 text-[13px] font-light whitespace-nowrap"
-              style={{ color: "#555555" }}
-            >
-              {label}
-            </Link>
-          ))}
-        </div>
+        {navItems.map(({ label, href }) => (
+          <Link
+            key={label}
+            href={href}
+            className="px-4 py-1.5 text-[13px] font-light whitespace-nowrap"
+            style={{ color: "#555555" }}
+          >
+            {label}
+          </Link>
+        ))}
 
-        {/* Contact CTA — pill within pill */}
         <a
           href="mailto:hello@blackvertex.io"
-          className="ml-2 text-[12px] font-light whitespace-nowrap hidden md:inline-flex"
+          className="ml-2 text-[12px] font-light whitespace-nowrap inline-flex"
           style={{
             background: "#1a1a1a",
             color: "#ffffff",
@@ -79,19 +75,19 @@ export default function Navbar() {
         >
           Contact
         </a>
-
-        {/* Hamburger — mobile only */}
-        <button
-          className="md:hidden ml-2 flex flex-col justify-center items-center gap-[5px] p-2"
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-          style={{ width: 36, height: 36 }}
-        >
-          <span className="block w-5 h-px bg-gray-800" />
-          <span className="block w-5 h-px bg-gray-800" />
-          <span className="block w-5 h-px bg-gray-800" />
-        </button>
       </nav>
+
+      {/* Hamburger — mobile only, fixed top-right, no background */}
+      <button
+        className="fixed top-5 right-5 z-50 md:hidden flex flex-col justify-center items-center gap-[5px]"
+        onClick={() => setOpen(true)}
+        aria-label="Open menu"
+        style={{ width: 36, height: 36 }}
+      >
+        <span className="block w-5 h-px bg-gray-800" />
+        <span className="block w-5 h-px bg-gray-800" />
+        <span className="block w-5 h-px bg-gray-800" />
+      </button>
 
       {/* Fullscreen mobile menu */}
       {open && (
@@ -99,7 +95,6 @@ export default function Navbar() {
           className="fixed inset-0 z-[60] bg-white flex flex-col items-center justify-center"
           style={{ animation: "fadeIn 200ms ease forwards" }}
         >
-          {/* Close button */}
           <button
             onClick={() => setOpen(false)}
             className="absolute top-0 right-0 p-6 text-2xl text-gray-800"
@@ -108,7 +103,6 @@ export default function Navbar() {
             ×
           </button>
 
-          {/* Nav links */}
           <nav className="flex flex-col items-center gap-0">
             {navItems.map(({ label, href }) => (
               <button
