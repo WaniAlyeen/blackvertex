@@ -28,10 +28,11 @@ export default function Hero() {
           style={{
             marginTop: "-3rem",
             zIndex: 10,
-            background: "rgba(255, 255, 255, 0.55)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
-            borderTop: "1px solid rgba(255, 255, 255, 0.6)",
+            background: "rgba(255, 255, 255, 0.08)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            borderTop: "1px solid rgba(255, 255, 255, 0.15)",
+            borderBottom: "1px solid rgba(255, 255, 255, 0.05)",
           }}
         >
           <p
@@ -39,7 +40,7 @@ export default function Hero() {
             style={{
               fontSize: "0.6rem",
               letterSpacing: "0.12em",
-              color: "#6b7280",
+              color: "rgba(255, 255, 255, 0.6)",
             }}
           >
             BLACK VERTEX — EST. 2024
@@ -51,7 +52,8 @@ export default function Hero() {
               fontSize: "clamp(2.4rem, 8vw, 3.5rem)",
               lineHeight: 1.05,
               letterSpacing: "-0.02em",
-              color: "#111111",
+              color: "#FFFFFF",
+              textShadow: "0 1px 20px rgba(0,0,0,0.15)",
             }}
           >
             We Make the
@@ -63,14 +65,14 @@ export default function Hero() {
 
           <p
             className="font-light mb-4"
-            style={{ fontSize: "0.7rem", color: "#9ca3af" }}
+            style={{ fontSize: "0.7rem", color: "rgba(255, 255, 255, 0.5)" }}
           >
             ¹ AI-powered advertising at the edge of what exists
           </p>
 
           <p
             className="font-light mb-6"
-            style={{ fontSize: "0.9rem", color: "#374151" }}
+            style={{ fontSize: "0.9rem", color: "rgba(255, 255, 255, 0.75)" }}
           >
             Black Vertex is an AI consultancy building the advertisements
             your competition doesn&apos;t know how to make yet.
