@@ -3,16 +3,14 @@
 import { useEffect, useRef } from "react";
 
 const attributions = [
-  { name: "Sarah Jenkins", role: "Nexus AI" },
-  { name: "David Chen", role: "EduTech Global" },
-  { name: "Elena Rossi", role: "Finserve" },
-  { name: "Marcus Thorne", role: "Vanguard Media" },
-  { name: "James Park", role: "Apex Brands" },
+  { name: "Bruce", role: "Elica" },
+  { name: "Fahad", role: "Electra Energy" },
+  { name: "Madiha", role: "Ru-Posh" },
+  { name: "Ifaq", role: "Royal Yamaha" },
 ];
 
 const stats = [
   { value: "400+", label: "Hours saved / month" },
-  { value: "15", label: "Languages localized" },
   { value: "100×", label: "More creatives generated" },
 ];
 
@@ -54,7 +52,7 @@ export default function WhyTrustUs() {
       }}
     >
       <div className="reveal hidden-below mb-16 md:mb-24">
-        <span className="eyebrow">0.2&nbsp;&nbsp;Proof</span>
+        <span className="eyebrow">Why Trust Us</span>
       </div>
 
       <div className="grid grid-cols-12 gap-8 mb-20 md:mb-28">
@@ -87,14 +85,14 @@ export default function WhyTrustUs() {
           <div className="flex items-center gap-3">
             <div className="w-6 h-px" style={{ background: "rgba(0,0,0,0.12)" }} />
             <span className="eyebrow">
-              Sarah Jenkins — Head of Marketing, Nexus AI
+              Fahad — Electra Energy
             </span>
           </div>
         </div>
       </div>
 
       <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-0 reveal hidden-below delay-3 section-rule"
+        className="grid grid-cols-1 md:grid-cols-2 gap-0 reveal hidden-below delay-3 section-rule"
         style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}
       >
         {stats.map((stat, i) => (
