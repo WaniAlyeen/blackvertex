@@ -22,14 +22,24 @@ export default function Hero() {
           />
         </div>
 
-        {/* Text block — white background, fully readable */}
-        <div className="bg-white px-6 py-8">
+        {/* Text block — glassmorphism panel overlapping image */}
+        <div
+          className="relative px-6 py-8"
+          style={{
+            marginTop: "-3rem",
+            zIndex: 10,
+            background: "rgba(255, 255, 255, 0.55)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            borderTop: "1px solid rgba(255, 255, 255, 0.6)",
+          }}
+        >
           <p
             className="font-medium uppercase mb-3"
             style={{
               fontSize: "0.6rem",
               letterSpacing: "0.12em",
-              color: "#888888",
+              color: "#6b7280",
             }}
           >
             BLACK VERTEX — EST. 2024
@@ -53,14 +63,14 @@ export default function Hero() {
 
           <p
             className="font-light mb-4"
-            style={{ fontSize: "0.7rem", color: "#888888" }}
+            style={{ fontSize: "0.7rem", color: "#9ca3af" }}
           >
             ¹ AI-powered advertising at the edge of what exists
           </p>
 
           <p
             className="font-light mb-6"
-            style={{ fontSize: "0.9rem", color: "#555555" }}
+            style={{ fontSize: "0.9rem", color: "#374151" }}
           >
             Black Vertex is an AI consultancy building the advertisements
             your competition doesn&apos;t know how to make yet.
