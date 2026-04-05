@@ -17,8 +17,26 @@ export async function generateMetadata({ params }: PageProps) {
   const project = await getProjectBySlug(params.slug);
   if (!project) return {};
   return {
-    title: `${project.title} | Black Vertex`,
+    title: `${project.title} — Black Vertex`,
     description: project.excerpt,
+    openGraph: {
+      title: `${project.title} — Black Vertex`,
+      description: project.excerpt,
+      images: [
+        {
+          url: project.thumbnail,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Black Vertex`,
+      description: project.excerpt,
+      images: [project.thumbnail],
+    },
   };
 }
 
