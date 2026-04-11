@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaEnvelope, FaLinkedin, FaInstagram, FaKey } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const footerLinks = {
   Pages: [
@@ -98,6 +99,15 @@ export default function Footer() {
               style={{ borderColor: "rgba(0,0,0,0.1)", color: "#9ca3af" }}
             >
               <FaInstagram className="text-[12px]" />
+            </a>
+            <a
+              href="https://x.com/blackvertexio?s=11"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-fill w-9 h-9 flex items-center justify-center"
+              style={{ borderColor: "rgba(0,0,0,0.1)", color: "#9ca3af" }}
+            >
+              <FaXTwitter className="text-[12px]" />
             </a>
           </div>
         </div>

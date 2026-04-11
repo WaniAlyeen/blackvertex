@@ -3,7 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { notFound } from "next/navigation";
 import { markdownToHtml } from "@/lib/markdown";
-import { FaTwitter, FaLinkedin, FaFacebook, FaLink, FaCalendarAlt, FaClock } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaLink, FaCalendarAlt, FaClock } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import { Metadata } from 'next';
 
@@ -130,8 +131,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-3">
               <span className="text-sm font-bold uppercase tracking-widest text-foreground/50 mr-2">Share</span>
-              <a href={`https://twitter.com/intent/tweet?url=${postUrl}&text=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#1DA1F2] hover:text-white transition-colors">
-                <FaTwitter />
+              <a href={`https://x.com/intent/tweet?url=${postUrl}&text=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-black hover:text-white transition-colors">
+                <FaXTwitter />
               </a>
               <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${postUrl}`} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#0A66C2] hover:text-white transition-colors">
                 <FaLinkedin />
