@@ -324,6 +324,24 @@
     margin: 2rem 0;
   }
 
+  .blog-content input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    accent-color: #111111;
+    cursor: default;
+    pointer-events: none;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .blog-content ul li:has(input[type="checkbox"]) {
+    list-style: none;
+    margin-left: -1.5rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
   .prose-content h2 {
     font-size: 1.1rem;
     font-weight: 600;
