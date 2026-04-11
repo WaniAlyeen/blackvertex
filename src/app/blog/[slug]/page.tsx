@@ -2,9 +2,7 @@ import { supabase } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { notFound } from "next/navigation";
-import ReactMarkdown from 'react-markdown';
-import rehypeHighlight from 'rehype-highlight';
-import 'highlight.js/styles/atom-one-dark.css';
+import { markdownToHtml } from "@/lib/markdown";
 import { FaTwitter, FaLinkedin, FaFacebook, FaLink, FaCalendarAlt, FaClock } from "react-icons/fa";
 import Link from "next/link";
 import { Metadata } from 'next';
@@ -73,6 +71,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     .neq('id', post.id)
     .limit(3);
 
+  const contentHtml = await markdownToHtml(post.body || '');
+
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://blackvertex.com";
   const postUrl = `${siteUrl}/blog/${post.slug}`;
 
@@ -121,11 +121,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             </div>
           )}
 
-          <div className="prose prose-invert prose-lg max-w-none prose-headings:font-display prose-headings:font-bold prose-h2:text-white prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-img:rounded-xl prose-pre:border prose-pre:border-white/10 prose-pre:bg-[#050505]">
-            <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
-              {post.body}
-            </ReactMarkdown>
-          </div>
+          <div
+            className="blog-content"
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
+          />
 
           {/* Social Share */}
           <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
