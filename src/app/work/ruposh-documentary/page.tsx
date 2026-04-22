@@ -56,15 +56,12 @@ export default async function RuposhDocumentaryPage() {
           </Link>
         </div>
 
-        {/* Hero — passive Vimeo background embed */}
-        <div
-          className="w-full overflow-hidden"
-          style={{ aspectRatio: "16/9", pointerEvents: "none" }}
-        >
+        {/* Hero — interactive Vimeo player */}
+        <div className="w-full overflow-hidden" style={{ aspectRatio: "16/9" }}>
           <iframe
-            src="https://player.vimeo.com/video/1185409516?background=1&autoplay=1&loop=1&muted=1"
+            src="https://player.vimeo.com/video/1185409516?autoplay=1&loop=1&autopause=0&controls=1&title=0&byline=0&portrait=0&color=00D4FF"
             allow="autoplay; fullscreen; picture-in-picture"
-            className="w-full h-full"
+            style={{ width: "100%", height: "100%", border: "none" }}
             title={project.title}
           />
         </div>
