@@ -16,9 +16,9 @@ export default function Hero() {
             alt=""
             fill
             priority
-            quality={90}
+            quality={75}
             className="object-cover object-top"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 100vw"
           />
         </div>
 
@@ -130,9 +130,9 @@ export default function Hero() {
             alt=""
             fill
             priority
-            quality={90}
+            quality={75}
             className="object-cover object-center"
-            sizes="100vw"
+            sizes="(max-width: 1200px) 100vw, 100vw"
           />
         </div>
 
