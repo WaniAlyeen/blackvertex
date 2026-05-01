@@ -66,6 +66,19 @@ export default function Hero() {
           </h1>
 
           <p
+            style={{
+              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontSize: "0.8rem",
+              color: "rgba(0,0,0,0.3)",
+              maxWidth: "480px",
+              marginTop: "0.75rem",
+              lineHeight: 1.5,
+            }}
+          >
+            AI Video Production Studio — Cinematic commercials, product video ads, AI animation, and product reveal videos for product brands.
+          </p>
+
+          <p
             className="font-light mb-4"
             style={{ fontSize: "0.7rem", color: "#666666" }}
           >
@@ -176,6 +189,19 @@ export default function Hero() {
             <br />
             Inevitable.<sup style={{ fontSize: "0.45em", verticalAlign: "super", letterSpacing: 0 }}>¹</sup>
           </h1>
+
+          <p
+            style={{
+              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontSize: "0.8rem",
+              color: "rgba(0,0,0,0.3)",
+              maxWidth: "480px",
+              marginTop: "0.75rem",
+              lineHeight: 1.5,
+            }}
+          >
+            AI Video Production Studio — Cinematic commercials, product video ads, AI animation, and product reveal videos for product brands.
+          </p>
 
           <p
             className="font-light mb-4"

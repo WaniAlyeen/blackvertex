@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Script from "next/script";
 import { getAllProjects, getProjectBySlug } from "@/lib/projects";
 import CaseStudyReveal from "@/components/CaseStudyReveal";
 import Navbar from "@/components/Navbar";
@@ -9,33 +10,55 @@ interface PageProps {
   params: { slug: string };
 }
 
+function slugToTitleCase(slug: string): string {
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
 export function generateStaticParams() {
   return getAllProjects().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const project = await getProjectBySlug(params.slug);
-  if (!project) return {};
+
+  const title = project
+    ? `${project.title} | Black Vertex AI Video Production`
+    : `${slugToTitleCase(params.slug)} | Black Vertex AI Video Production`;
+
+  const description =
+    project?.excerpt ||
+    "AI video production case study by Black Vertex — cinematic AI commercials, product video ads, and AI animation.";
+
   return {
-    title: `${project.title} — Black Vertex`,
-    description: project.excerpt,
+    title,
+    description,
+    alternates: {
+      canonical: `https://blackvertex.io/work/${params.slug}`,
+    },
     openGraph: {
-      title: `${project.title} — Black Vertex`,
-      description: project.excerpt,
-      images: [
-        {
-          url: project.thumbnail,
-          width: 1200,
-          height: 630,
-          alt: project.title,
-        },
-      ],
+      title,
+      description,
+      ...(project?.thumbnail && {
+        images: [
+          {
+            url: project.thumbnail,
+            width: 1200,
+            height: 630,
+            alt: project
+              ? `${project.client} — AI video production by Black Vertex`
+              : "AI video production by Black Vertex",
+          },
+        ],
+      }),
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} — Black Vertex`,
-      description: project.excerpt,
-      images: [project.thumbnail],
+      title,
+      description,
+      ...(project?.thumbnail && { images: [project.thumbnail] }),
     },
   };
 }
@@ -51,8 +74,28 @@ export default async function CaseStudyPage({ params }: PageProps) {
       ? allProjects[(currentIndex + 1) % allProjects.length]
       : null;
 
+  const creativeWorkSchema = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    creator: {
+      "@type": "Organization",
+      name: "Black Vertex",
+      url: "https://blackvertex.io",
+    },
+    url: `https://blackvertex.io/work/${params.slug}`,
+    description: project.excerpt,
+    client: project.client,
+  };
+
   return (
     <>
+      <Script
+        id={`creative-work-schema-${params.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
+      />
+
       <Navbar />
       <main className="min-h-screen bg-background text-foreground">
         {/* Back navigation */}
@@ -72,7 +115,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
               src={`https://player.vimeo.com/video/${project.vimeoId}?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1`}
               allow="autoplay; fullscreen; picture-in-picture"
               className="w-full h-full"
-              title={project.title}
+              title={`${project.title} — AI video production by Black Vertex`}
             />
           </div>
         )}

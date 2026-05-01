@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 const services = [
   {
     num: "01",
+    ariaLabel: "AI Brand Ambassador Production — Character Consistent AI Talent for Brands",
     title: "AI Brand\nAmbassadors",
     subtitle: "Character-consistent talent built\nfor campaigns that scale.",
     description:
@@ -13,6 +14,7 @@ const services = [
   },
   {
     num: "02",
+    ariaLabel: "Cinematic AI Commercials for Brands — End-to-End AI Video Production",
     title: "End-to-End Content\nProduction",
     subtitle: "Raw material to broadcast-ready.\nAny reference. Any scale.",
     description:
@@ -21,6 +23,7 @@ const services = [
   },
   {
     num: "03",
+    ariaLabel: "AI Business Automation — Custom AI Workflows, Intelligent Agents, and Automation Pipelines",
     title: "AI Business\nAutomation",
     subtitle: "Custom workflows, intelligent agents,\nand pipelines that run your operations.",
     description:
@@ -103,6 +106,7 @@ export default function Services() {
         {services.map((service, idx) => (
           <div
             key={idx}
+            aria-label={service.ariaLabel}
             className={`reveal hidden-below delay-${idx + 3} grid grid-cols-12 gap-6 py-10 md:py-12`}
           >
             <div className="col-span-2 md:col-span-1 flex items-start pt-1">

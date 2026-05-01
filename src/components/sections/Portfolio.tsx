@@ -85,7 +85,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
             <div className="clip-reveal-inner relative aspect-[4/3] w-full">
               <Image
                 src={project.thumbnail}
-                alt={project.title}
+                alt={`${project.title} — AI video production by Black Vertex`}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
