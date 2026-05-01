@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://blackvertex.io/pricing</loc><lastmod>2026-05-01T20:47:36.210Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://blackvertex.io/services/ai-animation-studio</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://blackvertex.io/services/ai-product-video-ads</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://blackvertex.io/services/cinematic-ai-commercials</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://blackvertex.io/services/product-reveal-videos</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-<url><loc>https://blackvertex.io</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>weekly</changefreq><priority>1</priority></url>
-<url><loc>https://blackvertex.io/work/project1</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://blackvertex.io/work/project2</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://blackvertex.io/work/project3</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://blackvertex.io/work/ruposh-documentary</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://blackvertex.io/blog/this-is-testing</loc><lastmod>2026-05-01T20:47:36.211Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://blackvertex.io/pricing</loc><lastmod>2026-05-01T21:21:00.721Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://blackvertex.io/services/ai-animation-studio</loc><lastmod>2026-05-01T21:21:00.724Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://blackvertex.io/services/ai-product-video-ads</loc><lastmod>2026-05-01T21:21:00.724Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://blackvertex.io/services/cinematic-ai-commercials</loc><lastmod>2026-05-01T21:21:00.724Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://blackvertex.io/services/product-reveal-videos</loc><lastmod>2026-05-01T21:21:00.724Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://blackvertex.io</loc><lastmod>2026-05-01T21:21:00.724Z</lastmod><changefreq>weekly</changefreq><priority>1</priority></url>
+<url><loc>https://blackvertex.io/work/ruposh-documentary</loc><lastmod>2026-05-01T21:21:00.724Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://blackvertex.io/blog/this-is-testing</loc><lastmod>2026-05-01T21:21:00.724Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://blackvertex.io/work/project1</loc><lastmod>2026-05-01T21:21:00.724Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://blackvertex.io/work/project2</loc><lastmod>2026-05-01T21:21:00.724Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://blackvertex.io/work/project3</loc><lastmod>2026-05-01T21:21:00.725Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

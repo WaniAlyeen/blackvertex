@@ -2,21 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-const blocks = [
-  {
-    label: "Truly 100% AI-Generated",
-    text: "Every frame, every scene, every commercial we produce is generated entirely by AI. No cameras. No crews. No studios. Nothing shot on set.",
-  },
-  {
-    label: "Best-in-Class AI Tools",
-    text: "We work with the most advanced generative video and image models available — combined through a proprietary multi-layered workflow built entirely in-house.",
-  },
-  {
-    label: "Simple to Get Started",
-    text: "Send us your product images and a brief. That's all we need. No production prep, no logistics, no lead time. We handle everything from there.",
-  },
-];
-
 export default function WhyDifferent() {
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -86,28 +71,135 @@ export default function WhyDifferent() {
         </div>
       </div>
 
+      {/* Mixed bento row */}
       <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-0 reveal hidden-below delay-3 section-rule"
-        style={{ borderBottom: "1px solid rgba(0,0,0,0.07)" }}
+        className="reveal hidden-below delay-3"
+        style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
       >
-        {blocks.map((block, i) => (
-          <div
-            key={i}
-            className={`py-6 md:py-12 pr-0 md:pr-12${i < blocks.length - 1 ? " border-b border-gray-100 md:border-b-0" : ""}`}
-            style={{
-              borderRight: i < blocks.length - 1 ? "1px solid rgba(0,0,0,0.07)" : "none",
-              paddingLeft: i > 0 ? "clamp(0rem, 4vw, 3rem)" : "0",
-            }}
-          >
-            <div className="eyebrow mb-3">{block.label}</div>
-            <p
-              className="font-sans font-light text-sm md:text-[14px] leading-relaxed"
-              style={{ color: "#6b7280" }}
+        {/* Block 1 — wide (flex: 2) */}
+        <div
+          style={{
+            flex: "2 1 280px",
+            background: "var(--bento-warm)",
+            border: "1px solid rgba(255,107,53,0.15)",
+            borderRadius: "16px",
+            padding: "2rem",
+          }}
+        >
+          {/* Stat */}
+          <div style={{ marginBottom: "0.5rem" }}>
+            <span
+              style={{
+                fontFamily: "var(--font-syne), sans-serif",
+                fontSize: "4rem",
+                fontWeight: 800,
+                color: "#0A0A0A",
+                lineHeight: 1,
+                display: "block",
+              }}
             >
-              {block.text}
-            </p>
+              100%
+            </span>
+            <span
+              style={{
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontSize: "0.875rem",
+                color: "rgba(0,0,0,0.4)",
+                display: "block",
+                marginTop: "0.25rem",
+              }}
+            >
+              AI-Generated
+            </span>
           </div>
-        ))}
+          <div className="eyebrow mb-3" style={{ marginTop: "1.25rem" }}>Truly 100% AI-Generated</div>
+          <p
+            className="font-sans font-light text-sm leading-relaxed"
+            style={{ color: "#6b7280" }}
+          >
+            Every frame, every scene, every commercial we produce is generated entirely by AI. No cameras. No crews. No studios. Nothing shot on set.
+          </p>
+        </div>
+
+        {/* Block 2 */}
+        <div
+          style={{
+            flex: "1 1 200px",
+            background: "var(--bento-cool)",
+            border: "1px solid rgba(102,126,234,0.15)",
+            borderRadius: "16px",
+            padding: "1.75rem",
+          }}
+        >
+          {/* Tool badges */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginBottom: "1rem" }}>
+            {["Kling 3.0", "Veo 3", "Runway"].map((tool) => (
+              <span
+                key={tool}
+                style={{
+                  background: "rgba(0,0,0,0.06)",
+                  borderRadius: "100px",
+                  padding: "4px 10px",
+                  fontSize: "10px",
+                  fontFamily: "var(--font-dm-mono), monospace",
+                  color: "rgba(0,0,0,0.55)",
+                  display: "inline-block",
+                }}
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+          <div className="eyebrow mb-3">Best-in-Class AI Tools</div>
+          <p
+            className="font-sans font-light text-sm leading-relaxed"
+            style={{ color: "#6b7280" }}
+          >
+            We work with the most advanced generative video and image models available — combined through a proprietary multi-layered workflow built entirely in-house.
+          </p>
+        </div>
+
+        {/* Block 3 */}
+        <div
+          style={{
+            flex: "1 1 200px",
+            background: "var(--bento-pink)",
+            border: "1px solid rgba(255,60,172,0.12)",
+            borderRadius: "16px",
+            padding: "1.75rem",
+          }}
+        >
+          {/* Checklist */}
+          <div style={{ marginBottom: "1rem", display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+            {[
+              "Send your product images",
+              "We handle production",
+              "Receive broadcast-ready video",
+            ].map((step) => (
+              <div
+                key={step}
+                style={{
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontSize: "13px",
+                  color: "rgba(0,0,0,0.6)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "6px",
+                }}
+              >
+                <span style={{ color: "#34D399", fontWeight: 700 }}>✓</span>
+                {step}
+              </div>
+            ))}
+          </div>
+          <div className="eyebrow mb-3">Simple to Get Started</div>
+          <p
+            className="font-sans font-light text-sm leading-relaxed"
+            style={{ color: "#6b7280" }}
+          >
+            Send us your product images and a brief. That&apos;s all we need. No production prep, no logistics, no lead time. We handle everything from there.
+          </p>
+        </div>
       </div>
     </section>
   );

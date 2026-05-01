@@ -628,7 +628,7 @@ export default function ServicePage({ params }: PageProps) {
             <div style={{ marginTop: "2rem" }}>
               <a
                 href="mailto:hello@blackvertex.io"
-                className="svc-primary-btn full-mobile"
+                className="btn-gradient full-mobile"
               >
                 Get a Quote for {data.h1}
               </a>

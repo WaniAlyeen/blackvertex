@@ -4,10 +4,23 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="w-full bg-white overflow-hidden">
+    <section className="relative w-full bg-white overflow-hidden">
+
+      {/* Gradient mesh — behind both layouts */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0"
+        style={{
+          background: `
+            radial-gradient(ellipse at 15% 60%, rgba(255,107,53,0.10) 0%, transparent 55%),
+            radial-gradient(ellipse at 85% 15%, rgba(102,126,234,0.09) 0%, transparent 55%),
+            radial-gradient(ellipse at 55% 85%, rgba(255,60,172,0.07) 0%, transparent 50%)
+          `,
+        }}
+      />
 
       {/* ─── MOBILE LAYOUT: text overlaid directly on full-screen image ─── */}
-      <div className="relative md:hidden" style={{ height: "100svh" }}>
+      <div className="relative z-10 md:hidden" style={{ height: "100svh" }}>
 
         {/* Image — full screen */}
         <div className="absolute inset-0" style={{ zIndex: 0 }}>
@@ -94,21 +107,7 @@ export default function Hero() {
 
           {/* CTA buttons — stacked, full width */}
           <div className="flex flex-col gap-3">
-            <a
-              href="/#contact"
-              className="font-light text-center"
-              style={{
-                fontSize: "0.75rem",
-                color: "#111111",
-                border: "1px solid rgba(0,0,0,0.25)",
-                borderRadius: "9999px",
-                padding: "14px 16px",
-                minHeight: "48px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
+            <a href="/#contact" className="btn-gradient">
               Start a Project →
             </a>
             <a
@@ -133,7 +132,7 @@ export default function Hero() {
       </div>
 
       {/* ─── DESKTOP LAYOUT: full-bleed image, text overlay bottom-left ─── */}
-      <div className="relative hidden md:block" style={{ minHeight: "100svh" }}>
+      <div className="relative z-10 hidden md:block" style={{ minHeight: "100svh" }}>
 
         {/* Background image */}
         <div className="absolute inset-0">
@@ -218,16 +217,7 @@ export default function Hero() {
 
           {/* CTA buttons */}
           <div className="flex flex-wrap gap-2 mb-7">
-            <a
-              href="/#contact"
-              className="text-[11px] font-light"
-              style={{
-                color: "#111111",
-                border: "1px solid rgba(0,0,0,0.25)",
-                borderRadius: "9999px",
-                padding: "6px 14px",
-              }}
-            >
+            <a href="/#contact" className="btn-gradient" style={{ fontSize: "0.8125rem", padding: "8px 18px" }}>
               Start a Project →
             </a>
             <a

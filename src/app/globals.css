@@ -5,6 +5,22 @@
 @layer base {
   :root {
     --border: rgba(0, 0, 0, 0.07);
+
+    /* Gradient accent tokens */
+    --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #9B59B6 50%, #3498DB 100%);
+    --gradient-warm:    linear-gradient(135deg, #FF8C42 0%, #FF3CAC 100%);
+    --gradient-cool:    linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+    --gradient-subtle:  linear-gradient(135deg, rgba(255,107,53,0.08) 0%, rgba(155,89,182,0.08) 100%);
+    --gradient-mesh:    radial-gradient(ellipse at 20% 50%, rgba(255,107,53,0.12) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 20%, rgba(102,126,234,0.10) 0%, transparent 60%),
+                        radial-gradient(ellipse at 60% 80%, rgba(255,60,172,0.08) 0%, transparent 60%);
+    --pill-active-bg:   #0A0A0A;
+    --pill-active-text: #FFFFFF;
+    --border-accent-gradient: linear-gradient(135deg, rgba(255,107,53,0.3), rgba(102,126,234,0.3));
+    --bento-warm:    rgba(255, 107, 53, 0.06);
+    --bento-cool:    rgba(102, 126, 234, 0.06);
+    --bento-pink:    rgba(255, 60, 172, 0.06);
+    --bento-neutral: rgba(0, 0, 0, 0.03);
   }
 
   * {
@@ -195,6 +211,35 @@
 
   /* ── Delay 7 for 5-step process ── */
   .delay-7 { transition-delay: 0.7s; }
+
+  /* ── Gradient CTA button ── */
+  .btn-gradient {
+    background: linear-gradient(135deg, #FF6B35 0%, #9B59B6 60%, #3498DB 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    color: #FFFFFF;
+    border: none;
+    font-family: var(--font-dm-sans);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    padding: 13px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-position 400ms ease, transform 150ms ease, box-shadow 150ms ease;
+  }
+  .btn-gradient:hover {
+    background-position: 100% 50%;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(155, 89, 182, 0.28);
+  }
+
+  @media (max-width: 375px) {
+    .btn-gradient { width: 100%; }
+  }
 
   /* ── Scrollbar hide ── */
   .scrollbar-hide {
