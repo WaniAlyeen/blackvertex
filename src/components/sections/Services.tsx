@@ -5,30 +5,30 @@ import { useEffect, useRef } from "react";
 const services = [
   {
     num: "01",
-    ariaLabel: "AI Brand Ambassador Production — Character Consistent AI Talent for Brands",
-    title: "AI Brand\nAmbassadors",
-    subtitle: "Character-consistent talent built\nfor campaigns that scale.",
+    ariaLabel: "AI Product Video Ads — High-Converting Product Advertisements from Your Images",
+    title: "AI Product\nVideo Ads",
+    subtitle: "From your product images\nto broadcast-ready ads.",
     description:
-      "Your brand deserves a face that never cancels, never ages, and shows up identically across every campaign, forever.\n\nWe build fully consistent AI characters — crafted from your references, your aesthetic, your vision. A brand ambassador that is entirely yours. One face. Infinite executions.",
-    tags: "AI Casting  /  Character Consistency  /  Brand Identity",
+      "Send us your product images. We return a professionally produced video ad engineered to stop scroll and drive action.\n\nOur AI production pipeline transforms even basic product photography into broadcast-quality commercial content — color-graded, sound-designed, and optimised for every platform you run.",
+    tags: "Performance Creative  /  Image-to-Ad  /  Platform Advertising",
   },
   {
     num: "02",
-    ariaLabel: "Cinematic AI Commercials for Brands — End-to-End AI Video Production",
-    title: "End-to-End Content\nProduction",
-    subtitle: "Raw material to broadcast-ready.\nAny reference. Any scale.",
+    ariaLabel: "Cinematic AI Commercials for Brands — Premium AI Brand Film Production",
+    title: "Cinematic AI\nCommercials",
+    subtitle: "Brand films and premium commercials\nfor campaigns that demand more.",
     description:
-      "Hand us a smartphone photo.\nWe hand you a broadcast-ready advertisement.\n\nThrough a proprietary multi-layered production workflow we developed entirely in-house, we transform raw client references — however imperfect — into pixel-perfect, cinematic brand content. No studio required. No compromise on quality.",
-    tags: "AI Production  /  Image Enhancement  /  Brand Advertising",
+      "We produce long-form cinematic commercials entirely through AI — no studios, no crews, no location logistics.\n\nFrom brand launches to campaign hero films, we build premium video narratives that match the quality of broadcast production at a fraction of the time and cost. Every frame directed with intention.",
+    tags: "Brand Films  /  Campaign Creative  /  Broadcast Quality",
   },
   {
     num: "03",
-    ariaLabel: "AI Business Automation — Custom AI Workflows, Intelligent Agents, and Automation Pipelines",
-    title: "AI Business\nAutomation",
-    subtitle: "Custom workflows, intelligent agents,\nand pipelines that run your operations.",
+    ariaLabel: "AI Animation and Product Reveal Videos — Stylized Motion and Cinematic Showcases",
+    title: "AI Animation &\nProduct Reveals",
+    subtitle: "Stylized animation and cinematic\nproduct showcases.",
     description:
-      "Beyond advertising, we architect AI-powered business pipelines — custom agents, automated workflows, and intelligent systems designed to remove friction, reduce overhead, and scale operations without scaling headcount.\n\nBuilt for businesses serious about efficiency.",
-    tags: "AI Agents  /  Workflow Automation  /  Business Intelligence",
+      "From Pixar-style character animation to dramatic product reveal sequences, we produce motion content that traditional studios cannot match at this speed or price point.\n\nEvery animation and reveal is built to specification — your aesthetic, your pacing, your brand world. Fully AI-generated. Fully original.",
+    tags: "AI Animation  /  Product Showcases  /  Motion Design",
   },
 ];
 

@@ -4,16 +4,16 @@ import { useEffect, useRef } from "react";
 
 const blocks = [
   {
-    label: "The Hard Part",
-    text: "Consistent human faces across every frame of every video — without a single real shoot.",
+    label: "Truly 100% AI-Generated",
+    text: "Every frame, every scene, every commercial we produce is generated entirely by AI. No cameras. No crews. No studios. Nothing shot on set.",
   },
   {
-    label: "The Rarer Part",
-    text: "A proprietary workflow built from zero. No off-the-shelf pipeline. No shared process. No competitor has seen it.",
+    label: "Best-in-Class AI Tools",
+    text: "We work with the most advanced generative video and image models available — combined through a proprietary multi-layered workflow built entirely in-house.",
   },
   {
-    label: "The Result",
-    text: "Advertisements that look like they cost ten times what they did — and perform like it too.",
+    label: "Simple to Get Started",
+    text: "Send us your product images and a brief. That's all we need. No production prep, no logistics, no lead time. We handle everything from there.",
   },
 ];
 

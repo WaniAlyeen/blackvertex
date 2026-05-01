@@ -89,8 +89,7 @@ export default function Hero() {
             className="font-light mb-6"
             style={{ fontSize: "0.9rem", color: "#444444" }}
           >
-            Black Vertex is an AI consultancy building the advertisements
-            your competition doesn&apos;t know how to make yet.
+            Black Vertex is a 100% AI-powered video production studio. We create cinematic commercials, product video ads, AI animation, and product reveal videos — no cameras, no crews, no compromises.
           </p>
 
           {/* CTA buttons — stacked, full width */}
@@ -214,8 +213,7 @@ export default function Hero() {
             className="font-light mb-6"
             style={{ fontSize: "0.875rem", color: "#888888", maxWidth: "36rem" }}
           >
-            Black Vertex is an AI consultancy building the advertisements
-            your competition doesn&apos;t know how to make yet.
+            Black Vertex is a 100% AI-powered video production studio. We create cinematic commercials, product video ads, AI animation, and product reveal videos — no cameras, no crews, no compromises.
           </p>
 
           {/* CTA buttons */}

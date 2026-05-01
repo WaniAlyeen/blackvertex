@@ -114,14 +114,15 @@ export default function Navbar() {
             <div
               className="absolute top-full left-0 mt-2"
               style={{
-                background: "rgba(10,10,10,0.96)",
-                border: "1px solid rgba(0,212,255,0.12)",
+                background: "rgba(255,255,255,0.95)",
+                border: "1px solid rgba(0,0,0,0.09)",
                 backdropFilter: "blur(12px)",
                 WebkitBackdropFilter: "blur(12px)",
-                borderRadius: "8px",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+                borderRadius: "12px",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
                 minWidth: "240px",
                 zIndex: 50,
+                padding: "6px",
               }}
             >
               {SERVICE_LINKS.map((item) => (
@@ -129,26 +130,22 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   title={item.title}
-                  className="block service-dropdown-item"
+                  className="block"
                   style={{
                     fontFamily: "var(--font-dm-sans), sans-serif",
                     fontSize: "14px",
                     fontWeight: 500,
-                    color: "rgba(255,255,255,0.8)",
-                    padding: "10px 16px",
-                    borderLeft: "2px solid transparent",
+                    color: "#0A0A0A",
+                    padding: "9px 12px",
+                    borderRadius: "6px",
                     textDecoration: "none",
-                    transition: "color 150ms ease, border-color 150ms ease, padding-left 150ms ease",
+                    transition: "background 150ms ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = "#00D4FF";
-                    e.currentTarget.style.borderLeftColor = "#00D4FF";
-                    e.currentTarget.style.paddingLeft = "10px";
+                    e.currentTarget.style.background = "#F5F5F5";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = "rgba(255,255,255,0.8)";
-                    e.currentTarget.style.borderLeftColor = "transparent";
-                    e.currentTarget.style.paddingLeft = "16px";
+                    e.currentTarget.style.background = "transparent";
                   }}
                 >
                   {item.label}

@@ -66,7 +66,7 @@ export default function About() {
             className="font-sans font-light text-[17px] leading-relaxed"
             style={{ color: "#4b5563", whiteSpace: "pre-line" }}
           >
-            {`Black Vertex was built to operate in the space most AI studios are afraid to enter.\n\nWe are an AI consultancy — part production studio, part technology firm — specialized in the kind of advertising work that pushes against the limits of what artificial intelligence can currently do.\n\nConsistent faces. Consistent characters. Pixel-perfect product accuracy. Cinematic quality from imperfect source material. These are not easy problems. They are the problems we chose to dedicate ourselves to.`}
+            {`Black Vertex Inc. is a one-of-a-kind AI video production studio specializing in high-quality, fully AI-generated commercials, product video ads, animations, and product reveal videos for product brands.\n\nWe are one of the only studios in the world operating at 100% AI capacity — no cameras, no crews, no studios. Just cutting-edge artificial intelligence and a proprietary production workflow built entirely from scratch.`}
           </p>
         </div>
       </div>
@@ -80,7 +80,7 @@ export default function About() {
             className="font-sans font-light text-[15px] leading-relaxed"
             style={{ color: "#6b7280", whiteSpace: "pre-line" }}
           >
-            {`Our work sits at the intersection of two worlds that rarely collaborate well — creative advertising and deep AI production.\n\nWe do not use off-the-shelf tools and call it innovation. We built our own workflow, layer by layer, from the ground up. The result is a process that our clients cannot find anywhere else — and our competitors cannot replicate.\n\nBlack Vertex does not follow this industry.\nWe are several steps ahead of it.`}
+            {`Our production process is unlike anything else in the market. We built our workflow from the ground up — layer by layer, model by model — specifically to solve the problems that other AI studios refuse to tackle.\n\nThe result is a studio that moves faster, costs less, and delivers quality that rivals traditional broadcast production.\n\nBlack Vertex does not follow this industry.\nWe are several steps ahead of it.`}
           </p>
         </div>
 
