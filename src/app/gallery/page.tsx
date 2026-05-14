@@ -4,11 +4,11 @@ import GalleryClient from "./GalleryClient";
 export const metadata: Metadata = {
   title: "Gallery - Black Vertex",
   description:
-    "Explore all AI-generated video projects from Black Vertex — cinematic commercials, product reveals, and animation.",
+    "Explore all AI-generated video projects from Black Vertex — cinematic commercials, product reveals, AI animation, and more.",
   openGraph: {
     title: "Gallery - Black Vertex",
     description:
-      "Explore all AI-generated video projects from Black Vertex — cinematic commercials, product reveals, and animation.",
+      "Explore all AI-generated video projects from Black Vertex — cinematic commercials, product reveals, AI animation, and more.",
     url: "https://blackvertex.io/gallery",
     siteName: "Black Vertex",
     type: "website",
