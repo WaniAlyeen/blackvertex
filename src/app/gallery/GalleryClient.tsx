@@ -43,98 +43,68 @@ export default function GalleryClient({ videos }: GalleryClientProps) {
   }, [openVideoId, closeModal]);
 
   useEffect(() => {
-    if (openVideoId) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = openVideoId ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [openVideoId]);
 
-  const pillBase: React.CSSProperties = {
-    borderRadius: "100px",
-    padding: "6px 16px",
-    fontSize: "13px",
-    fontWeight: 400,
-    cursor: "pointer",
-    transition: "all 150ms ease",
-    fontFamily: "var(--font-dm-sans), sans-serif",
-    whiteSpace: "nowrap" as const,
-  };
-
-  const pillActive: React.CSSProperties = {
-    ...pillBase,
-    background: "var(--pill-active-bg)",
-    color: "var(--pill-active-text)",
-    border: "1px solid transparent",
-  };
-
-  const pillInactive: React.CSSProperties = {
-    ...pillBase,
-    background: "transparent",
-    color: "#888888",
-    border: "1px solid rgba(0,0,0,0.12)",
-  };
-
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen" style={{ background: "#ffffff", color: "#000000" }}>
       <div
-        className="max-w-[1200px] mx-auto px-6 md:px-8"
+        className="mx-auto"
         style={{
-          paddingTop: "clamp(7rem, 12vw, 10rem)",
-          paddingBottom: "clamp(5rem, 10vw, 8rem)",
+          maxWidth: "1200px",
+          paddingTop: "clamp(5rem, 12vw, 8rem)",
+          paddingBottom: "clamp(4rem, 10vw, 6rem)",
+          paddingLeft: "clamp(24px, 5vw, 40px)",
+          paddingRight: "clamp(24px, 5vw, 40px)",
         }}
       >
         {/* Header */}
-        <div className="mb-4">
-          <span className="eyebrow">Gallery</span>
-        </div>
-
         <h1
-          className="mb-4"
           style={{
             fontFamily: "var(--font-dm-sans), sans-serif",
-            fontSize: "clamp(2.5rem, 6vw, 5rem)",
-            fontWeight: 300,
-            letterSpacing: "-0.03em",
-            lineHeight: 1.05,
-            color: "#1a1a1a",
+            fontSize: "clamp(2.5rem, 5vw, 3rem)",
+            fontWeight: 600,
+            letterSpacing: "-0.02em",
+            lineHeight: 1.2,
+            color: "#000000",
+            marginBottom: "16px",
           }}
         >
           Our Work
         </h1>
 
         <p
-          className="mb-12 md:mb-16 max-w-lg"
           style={{
             fontFamily: "var(--font-dm-sans), sans-serif",
             fontSize: "16px",
-            fontWeight: 300,
-            lineHeight: 1.6,
-            color: "#888888",
+            fontWeight: 400,
+            lineHeight: 1.5,
+            color: "#666666",
+            marginBottom: "32px",
+            maxWidth: "480px",
           }}
         >
           Every project, every vision — fully AI-generated.
         </p>
 
         {/* Filter tags */}
-        <div className="flex flex-wrap gap-2 mb-10 md:mb-14">
-          <button
+        <div
+          className="flex flex-wrap"
+          style={{ gap: "12px", marginBottom: "clamp(40px, 6vw, 56px)" }}
+        >
+          <FilterButton
+            label="All"
+            active={activeTag === ALL_TAG}
             onClick={() => setActiveTag(ALL_TAG)}
-            style={activeTag === ALL_TAG ? pillActive : pillInactive}
-          >
-            All
-          </button>
+          />
           {allTags.map((tag) => (
-            <button
+            <FilterButton
               key={tag}
+              label={tag}
+              active={activeTag === tag}
               onClick={() => setActiveTag(tag)}
-              style={activeTag === tag ? pillActive : pillInactive}
-            >
-              {tag}
-            </button>
+            />
           ))}
         </div>
 
@@ -153,27 +123,41 @@ export default function GalleryClient({ videos }: GalleryClientProps) {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Lightbox modal */}
       {openVideoId && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
-          style={{ background: "rgba(0,0,0,0.85)" }}
+          className="fixed inset-0 flex items-center justify-center p-4 md:p-8"
+          style={{ background: "rgba(0,0,0,0.9)", zIndex: 50 }}
           onClick={closeModal}
         >
           <div
-            className="relative w-full max-w-4xl"
+            className="relative w-full"
+            style={{ maxWidth: "min(90vw, 1100px)" }}
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={closeModal}
-              aria-label="Close modal"
-              className="absolute -top-11 right-0 flex items-center justify-center text-white/70 hover:text-white transition-colors"
+              aria-label="Close gallery modal"
               style={{
+                position: "absolute",
+                top: "-44px",
+                right: 0,
+                width: 32,
+                height: 32,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "rgba(255,255,255,0.7)",
                 fontSize: "28px",
                 lineHeight: 1,
-                minWidth: 44,
-                minHeight: 44,
+                cursor: "pointer",
+                background: "none",
+                border: "none",
+                padding: 0,
+                transition: "color 150ms ease",
               }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = "#ffffff"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.7)"; }}
             >
               ×
             </button>
@@ -202,6 +186,37 @@ export default function GalleryClient({ videos }: GalleryClientProps) {
   );
 }
 
+function FilterButton({
+  label,
+  active,
+  onClick,
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        fontFamily: "var(--font-dm-sans), sans-serif",
+        fontSize: "14px",
+        fontWeight: 500,
+        padding: "6px 16px",
+        borderRadius: "100px",
+        border: "1px solid #000000",
+        background: active ? "#000000" : "#f5f5f5",
+        color: active ? "#ffffff" : "#000000",
+        cursor: "pointer",
+        whiteSpace: "nowrap",
+        transition: "background 150ms ease, color 150ms ease",
+      }}
+    >
+      {label}
+    </button>
+  );
+}
+
 function VideoCard({
   video,
   onOpen,
@@ -217,85 +232,103 @@ function VideoCard({
       onClick={onOpen}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative w-full overflow-hidden rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
-      style={{ aspectRatio: "16/9", display: "block" }}
-      aria-label={`Play video: ${label}`}
+      className="relative w-full overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+      style={{
+        aspectRatio: "16/9",
+        display: "block",
+        borderRadius: "12px",
+        border: "none",
+        padding: 0,
+        cursor: "pointer",
+      }}
+      aria-label={`Play video: ${video.tags.join(", ")}`}
     >
       {/* Thumbnail */}
       <div
-        className="absolute inset-0 transition-transform duration-500 ease-out"
-        style={{ transform: hovered ? "scale(1.04)" : "scale(1)" }}
+        className="absolute inset-0"
+        style={{
+          transform: hovered ? "scale(1.04)" : "scale(1)",
+          transition: "transform 500ms ease-out",
+        }}
       >
         {video.thumbnail ? (
           <Image
             src={video.thumbnail}
-            alt={`Video: ${label}`}
+            alt={`Video: ${video.tags.join(", ")}`}
             fill
             sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
             className="object-cover"
+            quality={85}
             loading="lazy"
           />
         ) : (
-          <div className="w-full h-full" style={{ background: "#1a1a1a" }} />
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              background: "linear-gradient(135deg, #2a2a2a 0%, #111111 100%)",
+            }}
+          />
         )}
       </div>
 
       {/* Gradient overlay */}
       <div
-        className="absolute inset-0 transition-opacity duration-300"
+        className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 55%, transparent 100%)",
-          opacity: hovered ? 1 : 0.65,
+            "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%)",
+          opacity: hovered ? 1 : 0.7,
+          transition: "opacity 300ms ease",
         }}
       />
 
       {/* Play button */}
       <div
         className="absolute inset-0 flex items-center justify-center"
-        style={{ opacity: hovered ? 1 : 0.75, transition: "opacity 250ms ease" }}
+        style={{ pointerEvents: "none" }}
       >
         <div
           style={{
-            width: 52,
-            height: 52,
+            width: 56,
+            height: 56,
             borderRadius: "50%",
-            background: "rgba(255,255,255,0.92)",
+            background: "rgba(255,255,255,1)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            transform: hovered ? "scale(1.12)" : "scale(1)",
+            transform: hovered ? "scale(1.1)" : "scale(1)",
             transition: "transform 250ms ease",
-            boxShadow: "0 4px 24px rgba(0,0,0,0.3)",
+            boxShadow: "0 4px 24px rgba(0,0,0,0.25)",
           }}
         >
           <svg
             width="18"
             height="18"
             viewBox="0 0 24 24"
-            fill="#1a1a1a"
+            fill="#000000"
             aria-hidden="true"
-            style={{ marginLeft: 2 }}
+            style={{ marginLeft: 3 }}
           >
             <path d="M8 5v14l11-7z" />
           </svg>
         </div>
       </div>
 
-      {/* Tag chip */}
-      <div className="absolute bottom-3 left-3">
+      {/* Tag chip — bottom-left */}
+      <div className="absolute" style={{ bottom: "12px", left: "12px" }}>
         <span
           style={{
             fontFamily: "var(--font-dm-mono), monospace",
-            fontSize: "10px",
-            fontWeight: 400,
-            color: "rgba(255,255,255,0.9)",
-            background: "rgba(0,0,0,0.5)",
+            fontSize: "12px",
+            fontWeight: 500,
+            color: "rgba(255,255,255,0.95)",
+            background: "rgba(0,0,0,0.6)",
             backdropFilter: "blur(8px)",
             WebkitBackdropFilter: "blur(8px)",
             borderRadius: "100px",
-            padding: "3px 10px",
-            letterSpacing: "0.06em",
+            padding: "4px 10px",
+            letterSpacing: "0.05em",
             textTransform: "uppercase",
           }}
         >

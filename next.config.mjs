@@ -11,6 +11,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: '*.supabase.co',
       },
+      {
+        // Vimeo thumbnail CDN — used by the gallery page via oEmbed API
+        protocol: 'https',
+        hostname: 'i.vimeocdn.com',
+      },
     ],
   },
 };

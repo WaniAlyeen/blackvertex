@@ -19,7 +19,10 @@
       "Bash(npx *)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\alyee\\\\OneDrive\\\\Desktop\\\\blackvertex\" -Force)",
       "Bash(Select-Object Name, FullName)",
-      "Bash(Test-Path C:\\\\Users\\\\alyee\\\\OneDrive\\\\Desktop\\\\blackvertex\\\\src\\\\app\\\\gallery *)"
+      "Bash(Test-Path C:\\\\Users\\\\alyee\\\\OneDrive\\\\Desktop\\\\blackvertex\\\\src\\\\app\\\\gallery *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\alyee\\\\OneDrive\\\\Desktop\\\\blackvertex\" -Recurse -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)"
     ]
   }
 }
