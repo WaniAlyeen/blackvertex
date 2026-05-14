@@ -30,6 +30,7 @@ const SERVICE_LINKS = [
 
 const OTHER_NAV_ITEMS = [
   { label: "Work", href: "/#projects", activePath: "/work" },
+  { label: "Gallery", href: "/gallery", activePath: "/gallery" },
   { label: "Blog", href: "/blog", activePath: "/blog" },
   { label: "Pricing", href: "/pricing", activePath: "/pricing" },
 ];

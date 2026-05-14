@@ -14,7 +14,12 @@
       "Bash(node -e \"require\\('canvas'\\)\")",
       "Bash(node -e \"require\\('sharp'\\)\")",
       "Bash(python -c \"from PIL import Image, ImageDraw, ImageFont; print\\('Pillow available'\\)\")",
-      "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\")"
+      "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\")",
+      "Bash(npx skills *)",
+      "Bash(npx *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\alyee\\\\OneDrive\\\\Desktop\\\\blackvertex\" -Force)",
+      "Bash(Select-Object Name, FullName)",
+      "Bash(Test-Path C:\\\\Users\\\\alyee\\\\OneDrive\\\\Desktop\\\\blackvertex\\\\src\\\\app\\\\gallery *)"
     ]
   }
 }
